@@ -77,3 +77,4 @@ path:
     data:
         - "/var/lib/elasticsearch"
 #        - "/anything/else"
+    logs: /var/log/elasticsearch
