@@ -1,0 +1,79 @@
+---
+# this config is made with three master/data nodes named
+# node-a, node-b and node-c residing on hosts
+# elk-t-0-a, elk-t-0-b and elk-t-0-c
+bootstrap:
+# Lock all data in memory (disable swapping)
+    memory_lock: true
+    system_call_filter: true
+
+cluster:
+# all master nodes
+    initial_master_nodes:
+        - node-a
+        - node-b
+        - node-c
+# Name of cluster
+    name: elastic-farm
+    routing:
+        allocation:
+# NOT USED during tutorial but handy
+# manages data spread on cluster so redundancy can be achieved
+#            awareness:
+#                attributes: rack_id
+# Disk free space handling
+# Stops data saving on node when the limits are reached
+            disk:
+                threshold_enabled: true
+                watermark:
+                    flood_stage: 256mb
+                    high: 512mb
+                    low: 1024mb
+            node_concurrent_recoveries: 4
+
+discovery:
+    zen:
+# IMPORTANT
+# How many master nodes should be present to vote for master node
+# number should be majority of master nodes eg. (master nodes/2)+1
+        minimum_master_nodes: 2
+        ping:
+            unicast.hosts:
+                - elk-t-0-a
+                - elk-t-0-b
+                - elk-t-0-c
+
+gateway:
+# how many nodes should be in cluster
+    expected_nodes: 3
+# minimum needed nodes
+    recover_after_nodes: 2
+# how long shloud ES wait before startin of replication
+    recover_after_time: 10m
+
+# May be needed for big queries
+#http:
+#    max_content_length: 500mb
+#    max_header_size: 12mb
+
+index:
+    codec: best_compression
+network:
+    host: "::0"
+
+node:
+# Not used during tutorial
+#    attr:
+#        rack_id: rackid
+    data: true
+    master: true
+# EDIT
+# this must be uniqe in cluster for each node
+    name: node-a
+
+path:
+# Where would data reside on system
+# It is better to use each drive separately if you have more drives, than using RAID
+    data:
+        - "/var/lib/elasticsearch"
+#        - "/anything/else"
