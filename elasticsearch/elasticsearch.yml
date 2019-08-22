@@ -14,7 +14,7 @@ cluster:
         - node-b
         - node-c
 # Name of cluster
-    name: elastic-farm
+    name: gks2019
     routing:
         allocation:
 # NOT USED during tutorial but handy
@@ -48,7 +48,7 @@ gateway:
     expected_nodes: 3
 # minimum needed nodes
     recover_after_nodes: 2
-# how long shloud ES wait before startin of replication
+# how long shloud ES wait before start of replication
     recover_after_time: 10m
 
 # May be needed for big queries
