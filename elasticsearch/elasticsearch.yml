@@ -39,9 +39,9 @@ discovery:
         minimum_master_nodes: 2
         ping:
             unicast.hosts:
-                - elk-t-0-a
-                - elk-t-0-b
-                - elk-t-0-c
+                - elk-X-a
+                - elk-X-b
+                - elk-X-c
 
 gateway:
 # how many nodes should be in cluster
