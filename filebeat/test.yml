@@ -1,0 +1,12 @@
+filebeat:
+  inputs:
+    - type: log
+      paths:
+        - /var/log/messages
+      fields:
+        type: test
+      fields_under_root: true
+output:
+  logstash:
+    hosts:
+      - "elk-X-b:5044"
