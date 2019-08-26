@@ -1,0 +1,38 @@
+{
+         "input" => {
+        "type" => "log"
+    },
+        "agent" => {
+            "hostname" => "elk-X-b",
+                  "id" => "ca9d2d29-b991-43b5-91e9-c360b1f1dd56",
+        "ephemeral_id" => "e7267066-5020-43eb-b874-e0891db70fd6",
+                "type" => "filebeat",
+             "version" => "7.3.1"
+    },
+    "@timestamp" => 2019-08-26T07:23:15.420Z,
+           "ecs" => {
+        "version" => "1.0.1"
+    },
+           "log" => {
+          "file" => {
+            "path" => "/var/log/messages"
+        },
+        "offset" => 1273289
+    },
+     "@metadata" => {
+        "ip_address" => "127.0.0.1",
+           "version" => "7.3.1",
+              "beat" => "filebeat",
+              "type" => "_doc"
+    },
+      "@version" => "1",
+          "host" => {
+        "name" => "elk-X-b"
+    },
+       "message" => "Aug 26 09:03:40 localhost kernel: PCI-DMA: Using software bounce buffering for IO (SWIOTLB)",
+          "type" => "messages",
+          "tags" => [
+        [0] "beats_input_codec_plain_applied"
+    ]
+}
+
