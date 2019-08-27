@@ -1,0 +1,68 @@
+#####################################################
+# Useful links:
+
+# Most interesting one
+# Grok debugger
+https://grokdebug.herokuapp.com/
+
+#####################################################
+# Not in presentation but very useful
+
+# Tmux cheat sheet
+https://gist.github.com/MohamedAlaa/2961058
+
+# Logstash docs
+https://www.elastic.co/guide/en/logstash/current/index.html
+
+# Elasticsearch docs
+https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html
+
+# Beats docs
+https://www.elastic.co/guide/en/beats/libbeat/current/index.html
+
+# Filebeat docs
+https://www.elastic.co/guide/en/beats/filebeat/current/index.html
+
+# Kibana docs
+https://www.elastic.co/guide/en/kibana/current/index.html
+
+
+#####################################################
+# Links found in presentation not in materials:
+
+# ES heap size guidline
+https://www.elastic.co/guide/en/elasticsearch/reference/7.3/heap-size.html
+
+# Logstash logstash.yml guide
+https://www.elastic.co/guide/en/logstash/7.3/logstash-settings-file.html
+
+# Logstash logstash.conf
+https://www.elastic.co/guide/en/logstash/7.3/configuration.html
+
+# Logstash input plugins
+https://www.elastic.co/guide/en/logstash/7.3/input-plugins.html
+
+
+# Logstash output plugins
+https://www.elastic.co/guide/en/logstash/7.3/output-plugins.html
+
+
+# Logstash filter plugins
+https://www.elastic.co/guide/en/logstash/7.3/filter-plugins.html
+
+# Filebeat config
+https://www.elastic.co/guide/en/beats/filebeat/7.3/configuring-howto-filebeat.html
+
+# Filebeat multiline
+https://www.elastic.co/guide/en/beats/filebeat/7.3/multiline-examples.html
+
+# Grok reference
+https://www.elastic.co/guide/en/logstash/7.3/plugins-filters-grok.html
+
+# Date reference
+https://www.elastic.co/guide/en/logstash/7.3/plugins-filters-date.html
+
+# Kibana query language
+https://www.elastic.co/guide/en/kibana/current/kuery-query.html
+
+
