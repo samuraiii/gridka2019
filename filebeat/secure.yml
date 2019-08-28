@@ -1,0 +1,13 @@
+filebeat:
+  inputs:
+    - type: log
+      paths:
+        - /var/log/secure
+      fields:
+        type: secure
+      fields_under_root: true
+output:
+  logstash:
+    hosts:
+      - "elk-X-b:5044"
+      - "elk-X-c:5044"
