@@ -4,6 +4,7 @@
 # Most interesting one
 # Grok debugger
 https://grokdebug.herokuapp.com/
+# This tool is also part of kibana
 
 #####################################################
 # Not in presentation but very useful

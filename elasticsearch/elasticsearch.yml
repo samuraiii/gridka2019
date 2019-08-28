@@ -32,16 +32,10 @@ cluster:
             node_concurrent_recoveries: 4
 
 discovery:
-    zen:
-# IMPORTANT
-# How many master nodes should be present to vote for master node
-# number should be majority of master nodes eg. (master nodes/2)+1
-        minimum_master_nodes: 2
-        ping:
-            unicast.hosts:
-                - elk-X-a
-                - elk-X-b
-                - elk-X-c
+    seed_hosts:
+        - elk-X-a
+        - elk-X-b
+        - elk-X-c
 
 gateway:
 # how many nodes should be in cluster
